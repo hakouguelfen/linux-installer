@@ -13,7 +13,7 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
 # install fonts & thmes
-yay -S nerd-fonts-mononoki ttf-meslo-nerd-font-powerlevel11k nvim-packer-git colloid-gtk-theme-git colloid-icon-theme-git
+paru -S nerd-fonts-mononoki ttf-meslo-nerd-font-powerlevel10k nvim-packer-git colloid-gtk-theme-git colloid-icon-theme-git
 sudo pacman -S ttf-fira-code ttf-font-awesome
 
 # install login manager
