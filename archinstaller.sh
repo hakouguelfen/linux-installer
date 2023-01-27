@@ -2,6 +2,8 @@
 
 sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid  mypy python-pip python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler
 
+sudo pacman -S --needed hsetroot
+
 ## install paru
 git clone https://aur.archlinux.org/paru.git paru && cd paru || exit
 makepkg -si
@@ -21,7 +23,7 @@ paru -S ly
 sudo systemctl enable ly
 
 #install some apps
-paru -S brave-nightly-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor mailspring pcmanfm lxsession
+paru -S brave-nightly-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor mailspring pcmanfm lxsession pacwall-git
 
 # configure zsh
 paru -S --noconfirm zsh-theme-powerlevel10k-git
