@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid  mypy python-pip python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler
+sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid  mypy python-pip python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler conky abiword
 
 sudo pacman -S --needed hsetroot
 
