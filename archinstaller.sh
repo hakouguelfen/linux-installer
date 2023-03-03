@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid  mypy python-pip python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler conky abiword github-cli dunst
+sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid  mypy python-pip python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler conky abiword github-cli dunst clang ninja sddm
 sudo pacman -S --needed hsetroot
 
 ## install paru
@@ -14,15 +14,17 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
 # install fonts & thmes
-paru -S nerd-fonts-mononoki ttf-meslo-nerd-font-powerlevel10k nvim-packer-git colloid-gtk-theme-git colloid-icon-theme-git catppuccin-gtk-theme-mocha
+paru -S ttf-meslo-nerd-font-powerlevel10k nvim-packer-git colloid-gtk-theme-git colloid-icon-theme-git catppuccin-gtk-theme-mocha sddm-catppuccin-git
 sudo pacman -S ttf-fira-code ttf-font-awesome
 
-# install login manager
-paru -S ly 
-sudo systemctl enable ly
+sudo systemctl enable sddm
+echo '
+[Theme]
+Current=catppuccin
+' >> sudo /etc/sddm.conf.d/theme.conf
 
 #install some apps
-paru -S brave-nightly-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor mailspring pcmanfm lxsession pacwall-git
+paru -S brave-nightly-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor pcmanfm lxsession pacwall-git
 
 # configure zsh
 paru -S --noconfirm zsh-theme-powerlevel10k-git
@@ -34,7 +36,6 @@ chsh -s /bin/zsh "$USER"
 sudo touch /etc/X11/xorg.conf.d/00-keyboard.conf
 sudo touch /etc/X11/xorg.conf.d/40-libinput.conf
 
-# change keyboard layout to azerty
 echo '
 Section "InputClass"
        Identifier "system-keyboard"
@@ -42,12 +43,13 @@ Section "InputClass"
        Option "XkbLayout" "fr"
        Option "XkbModel" "pc105"
        Option "XkbOptions" "terminate:ctrl_alt_bksp"
-EndSection' > sudo /etc/X11/xorg.conf.d/00-keyboard.conf
+EndSection' >> sudo /etc/X11/xorg.conf.d/00-keyboard.conf
 
-## enable touchpad 
 echo '
 Section "InputClass"
    Identifier "libinput touchpad catchall"
    Driver "libinput"
    Option "Tapping" "on"
-EndSection' > sudo /etc/X11/xorg.conf.d/40-libinput.conf
+EndSection' >> sudo /etc/X11/xorg.conf.d/40-libinput.conf
+ 
+paru -S mailspring
