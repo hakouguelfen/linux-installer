@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid  mypy python-pip python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler conky abiword github-cli dunst clang ninja sddm
+sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid  mypy python-pip python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler conky github-cli dunst clang ninja sddm qbittorent python-yaml
 sudo pacman -S --needed hsetroot
 
 ## install paru
@@ -21,10 +21,10 @@ sudo systemctl enable sddm
 echo '
 [Theme]
 Current=catppuccin
-' >> sudo /etc/sddm.conf.d/theme.conf
+' >> sudo /usr/lib/sddm/sddm.conf.d/default.conf
 
 #install some apps
-paru -S brave-nightly-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor pcmanfm lxsession pacwall-git
+paru -S brave-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor pcmanfm lxsession pacwall-git mailspring
 
 # configure zsh
 paru -S --noconfirm zsh-theme-powerlevel10k-git
@@ -51,5 +51,3 @@ Section "InputClass"
    Driver "libinput"
    Option "Tapping" "on"
 EndSection' >> sudo /etc/X11/xorg.conf.d/40-libinput.conf
- 
-paru -S mailspring
