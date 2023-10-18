@@ -19,7 +19,7 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 # install fonts & thmes
-paru -S ttf-meslo-nerd-font-powerlevel10k nvim-packer-git colloid-gtk-theme-git colloid-icon-theme-git catppuccin-gtk-theme-mocha sddm-catppuccin-git
+paru -S ttf-meslo-nerd-font-powerlevel10k nvim-packer-git colloid-gtk-theme-git colloid-icon-theme-git catppuccin-gtk-theme-mocha sddm-catppuccin-git ttf-amiri
 sudo pacman -S ttf-fira-code ttf-font-awesome
 
 sudo systemctl enable sddm
