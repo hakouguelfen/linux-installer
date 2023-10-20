@@ -29,7 +29,7 @@ Current=catppuccin
 ' >> sudo /usr/lib/sddm/sddm.conf.d/default.conf
 
 #install some apps
-paru -S brave-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor pcmanfm lxsession pacwall-git mailspring
+paru -S brave-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor pcmanfm lxsession mailspring insomnia-bin
 
 # configure zsh
 paru -S --noconfirm zsh-theme-powerlevel10k-git
