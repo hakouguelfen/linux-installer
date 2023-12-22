@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid  mypy python-pip python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler conky github-cli dunst clang ninja sddm qbittorent python-yaml discord libsecret gnome-keyring mpv udiskie
+sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid mypy python-pip python-black python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler conky github-cli dunst clang ninja sddm qbittorent python-yaml discord libsecret gnome-keyring mpv udiskie pipewire
 sudo pacman -S --needed hsetroot
 
 ## install paru
