@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nemo fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly qbittorrent
+sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nemo fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly qbittorrent polkit-kde-agent qt5-wayland qt6-wayland discord htop neofetch flameshot
 sudo pacman -S --needed hsetroot
 
 ########################################
@@ -24,7 +24,7 @@ paru -S colloid-gtk-theme-git colloid-icon-theme-git ttf-amiri
 sudo pacman -S ttf-fira-codettf-firacode-nerd 
 
 #install some apps
-paru -S brave-bin spotify flameshot nomacs htop neofetch nwg-look-bin
+paru -S brave-bin nuclear-player-bin nomacs nwg-look-bin
 
 # configure zsh
 paru -S --noconfirm zsh-theme-powerlevel10k-git
@@ -34,9 +34,9 @@ chsh -s /bin/zsh root
 chsh -s /bin/zsh "$USER"
 
 # configure keyrings for mailspring
-dbus-update-activation-environment --systemd DISPLAY
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+# dbus-update-activation-environment --systemd DISPLAY
+# eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+# export SSH_AUTH_SOCK
 
 ## install fonts & thmes
 #paru -S catppuccin-gtk-theme-mocha sddm-catppuccin-git
