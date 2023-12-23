@@ -1,35 +1,30 @@
 #!/usr/bin/env bash
 
-sudo pacman -S base-devel xorg picom nitrogen zsh qtile alacritty lsd bat zoxide fzf neovim vivid mypy python-pip python-black python-iwlib rofi vlc transmission-gtk zsh-syntax-highlighting zsh-autosuggestions alsa-utils light zip unzip ripgrep fd emacs most zathura zathura-pdf-poppler conky github-cli dunst clang ninja sddm qbittorent python-yaml discord libsecret gnome-keyring mpv udiskie pipewire
+sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nemo fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly
 sudo pacman -S --needed hsetroot
 
-## install paru
+########################################
+########### Install paru ###############
+########################################
 git clone https://aur.archlinux.org/paru.git paru && cd paru || exit
 makepkg -si
 cd ..
 rm -rf paru
 
-# install doom emacs
+########################################
+########### Install doom ###############
+########################################
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
-# configure keyrings for mailspring
-dbus-update-activation-environment --systemd DISPLAY
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
-
-# install fonts & thmes
-paru -S ttf-meslo-nerd-font-powerlevel10k nvim-packer-git colloid-gtk-theme-git colloid-icon-theme-git catppuccin-gtk-theme-mocha sddm-catppuccin-git ttf-amiri
-sudo pacman -S ttf-fira-code ttf-font-awesome
-
-sudo systemctl enable sddm
-echo '
-[Theme]
-Current=catppuccin
-' >> sudo /usr/lib/sddm/sddm.conf.d/default.conf
+########################################
+######### install fonts & thmes ########
+########################################
+paru -S colloid-gtk-theme-git colloid-icon-theme-git ttf-amiri
+sudo pacman -S ttf-fira-codettf-firacode-nerd 
 
 #install some apps
-paru -S brave-bin spotify flameshot nomacs htop neofetch lxappearance qt5ct nm-connection-editor pcmanfm lxsession mailspring insomnia-bin
+paru -S brave-bin spotify flameshot nomacs htop neofetch nwg-look-bin
 
 # configure zsh
 paru -S --noconfirm zsh-theme-powerlevel10k-git
@@ -38,21 +33,15 @@ echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.z
 chsh -s /bin/zsh root
 chsh -s /bin/zsh "$USER"
 
-sudo touch /etc/X11/xorg.conf.d/00-keyboard.conf
-sudo touch /etc/X11/xorg.conf.d/40-libinput.conf
+# configure keyrings for mailspring
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 
-echo '
-Section "InputClass"
-       Identifier "system-keyboard"
-       MatchIsKeyboard "on"
-       Option "XkbLayout" "fr"
-       Option "XkbModel" "pc105"
-       Option "XkbOptions" "terminate:ctrl_alt_bksp"
-EndSection' >> sudo /etc/X11/xorg.conf.d/00-keyboard.conf
-
-echo '
-Section "InputClass"
-   Identifier "libinput touchpad catchall"
-   Driver "libinput"
-   Option "Tapping" "on"
-EndSection' >> sudo /etc/X11/xorg.conf.d/40-libinput.conf
+## install fonts & thmes
+#paru -S catppuccin-gtk-theme-mocha sddm-catppuccin-git
+# sudo systemctl enable sddm
+# echo '
+# [Theme]
+# Current=catppuccin
+# ' >> sudo /usr/lib/sddm/sddm.conf.d/default.conf
