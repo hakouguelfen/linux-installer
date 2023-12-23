@@ -26,6 +26,14 @@ sudo pacman -S ttf-fira-codettf-firacode-nerd
 #install some apps
 paru -S brave-bin nuclear-player-bin nomacs nwg-look-bin
 
+########################################
+########### clone my dotfiles ##########
+########################################
+git clone -b main https://github.com/hakouklvn/dotfiles
+cp -r dotfiles/.config/* .config/
+cp dotfiles/.zshrc ~/
+cp dotfiles/.p10k.zsh ~/
+
 # configure zsh
 paru -S --noconfirm zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
