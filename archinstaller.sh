@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nemo fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly
+sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nemo fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly qbittorrent
 sudo pacman -S --needed hsetroot
 
 ########################################
