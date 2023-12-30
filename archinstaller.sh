@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nemo fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly qbittorrent polkit-kde-agent qt5-wayland qt6-wayland discord htop neofetch flameshot
+sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nemo fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly qbittorrent polkit-kde-agent qt5-wayland qt6-wayland discord htop neofetch flameshot stow
 sudo pacman -S --needed hsetroot
 
 ########################################
@@ -29,10 +29,8 @@ paru -S brave-bin nuclear-player-bin nomacs nwg-look-bin
 ########################################
 ########### clone my dotfiles ##########
 ########################################
-git clone -b main https://github.com/hakouklvn/dotfiles
-cp -r dotfiles/.config/* .config/
-cp dotfiles/.zshrc ~/
-cp dotfiles/.p10k.zsh ~/
+git clone https://github.com/hakouklvn/wayland_dotfiles
+stow wayland_dotfiles/*  
 
 # configure zsh
 paru -S --noconfirm zsh-theme-powerlevel10k-git
