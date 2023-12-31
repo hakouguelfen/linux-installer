@@ -32,22 +32,6 @@ paru -S brave-bin nuclear-player-bin nomacs nwg-look-bin
 git clone https://github.com/hakouklvn/wayland_dotfiles
 stow wayland_dotfiles/*  
 
-# configure zsh
-paru -S --noconfirm zsh-theme-powerlevel10k-git
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-
 chsh -s /bin/zsh root
 chsh -s /bin/zsh "$USER"
 
-# configure keyrings for mailspring
-# dbus-update-activation-environment --systemd DISPLAY
-# eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-# export SSH_AUTH_SOCK
-
-## install fonts & thmes
-#paru -S catppuccin-gtk-theme-mocha sddm-catppuccin-git
-# sudo systemctl enable sddm
-# echo '
-# [Theme]
-# Current=catppuccin
-# ' >> sudo /usr/lib/sddm/sddm.conf.d/default.conf
