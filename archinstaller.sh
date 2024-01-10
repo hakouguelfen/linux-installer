@@ -31,7 +31,12 @@ paru -S brave-bin nuclear-player-bin nomacs nwg-look-bin
 ########################################
 git clone https://github.com/hakouklvn/wayland_dotfiles
 stow wayland_dotfiles/*  
+git clone https://github.com/hakouklvn/scripts .local/bin/
+git clone https://github.com/hakouklvn/wallpaper /usr/share/
 
+########################################
+########### change bash shell ##########
+########################################
 chsh -s /bin/zsh root
 chsh -s /bin/zsh "$USER"
 
