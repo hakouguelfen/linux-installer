@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nautilus fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly qbittorrent polkit-kde-agent qt5-wayland qt6-wayland discord htop neofetch flameshot stow
+sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi vlc zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler github-cli dunst libsecret gnome-keyring mpv udiskie nautilus fuzzel hyprpaper hyprland xdg-desktop-portal-hyprland waybar brightnessctl ly qbittorrent polkit-kde-agent qt5-wayland qt6-wayland discord htop neofetch flameshot stow imv
 sudo pacman -S --needed hsetroot
 
 ########################################
@@ -20,11 +20,11 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ########################################
 ######### install fonts & thmes ########
 ########################################
-paru -S colloid-gtk-theme-git colloid-icon-theme-git ttf-amiri
+paru -S colloid-gtk-theme-git colloid-icon-theme-git
 sudo pacman -S ttf-fira-codettf-firacode-nerd 
 
 #install some apps
-paru -S brave-bin nuclear-player-bin nomacs nwg-look-bin
+paru -S librewolf-bin nuclear-player-bin imv nwg-look-bin
 
 ########################################
 ########### clone my dotfiles ##########
