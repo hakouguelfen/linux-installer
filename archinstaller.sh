@@ -3,6 +3,7 @@
 sudo pacman -S zsh alacritty lsd bat zoxide fzf neovim rofi zsh-syntax-highlighting zsh-autosuggestions zip unzip ripgrep fd emacs-nativecmop most zathura zathura-pdf-poppler dunst mpv pcmanfm fuzzel hyprpaper hyprland waybar brightnessctl ly qbittorrent htop grim slurp stow imv mat2 onionshare nwg-look thunderbird
 sudo pacman -S xdg-desktop-portal-hyprland github-cli discord libsecret udiskie polkit-kde-agent qt5-wayland qt6-wayland
 sudo pacman -S --needed hsetroot
+
 ########################################
 ########### Install paru ###############
 ########################################
