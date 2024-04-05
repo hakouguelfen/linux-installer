@@ -19,10 +19,20 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install
 
 ########################################
-######### install fonts & thmes ########
+######### install fonts  ###############
 ########################################
-paru -S colloid-gtk-theme-git colloid-icon-theme-git
 sudo pacman -S ttf-fira-codettf-firacode-nerd 
+
+########################################
+######### install themes  ##############
+########################################
+git clone https://github.com/vinceliuice/Colloid-gtk-theme
+git clone https://github.com/vinceliuice/Colloid-icon-theme
+sh Colloid-gtk-theme/install.sh -t grey -c dark -l --tweaks nord 
+sh Colloid-icon-theme/install.sh -s nord -t grey
+
+rm -rf Colloid-gtk-theme
+rm -rf Colloid-icon-theme
 
 #install some apps
 paru -S librewolf-bin nuclear-player-bin spotify-bin
