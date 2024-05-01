@@ -35,7 +35,8 @@ rm -rf Colloid-gtk-theme
 rm -rf Colloid-icon-theme
 
 #install some apps
-paru -S librewolf-bin nuclear-player-bin spotify-bin
+sudo pacman -S spotify-launcher
+paru -S brave-bin nuclear-player-bin
 
 ########################################
 ########### clone my dotfiles ##########
