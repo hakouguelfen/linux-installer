@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 OS_NAME=$(awk -F= '/^ID=/ {print $2}' /etc/os-release)
-COMMON_PACKAGES="alacritty zsh neovim zip unzip most zathura zathura-pdf-poppler zathura-pdf-mupdf pcmanfm dunst mpv htop stow imv wget tmux pipewire brightnessctl ripgrep lsd bat zoxide fzf zsh-syntax-highlighting zsh-autosuggestions flameshot udiskie foliate"
+COMMON_PACKAGES="alacritty zsh neovim zip unzip most zathura zathura-pdf-poppler zathura-pdf-mupdf pcmanfm dunst mpv htop stow imv wget tmux pipewire brightnessctl ripgrep lsd bat zoxide fzf zsh-syntax-highlighting zsh-autosuggestions flameshot udiskie foliate dejavu-sans-fonts"
 NOT_COMMON_PACKAGES="vivid github-cli"
 WAYLAND_PACKAGES="xdg-desktop-portal-hyprland libsecret polkit-kde-agent qt5-wayland qt6-wayland fuzzel hyprpaper hyprland waybar grim slurp nwg-look"
 
@@ -51,7 +51,7 @@ main(){
     ########################################
     git clone https://github.com/hakouguelfen/dotfiles2 dotfiles
     cd dotfiles
-    stow -t ~ --ignore=README.md .
+    stow .
     cd
 
     ########################################
